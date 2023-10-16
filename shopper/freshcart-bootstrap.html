@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en-in">
+
+<head>
+    <title>Freshcart</title>
+    <link href="public/images/freshcart.ico" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        .scrollable-cards-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            display: flex;
+        }
+
+        .card {
+            width: 250px;
+            height: 450px;
+            margin: 2px;
+        }
+
+        .btn-hover:hover {
+            background-color: black !important;
+            color: white;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+        .page-link:hover{
+            background-color: black !important;
+            color: white;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+    </style>
+
+</head>
+
+<body class="container-fluid bg-info">
+    <div class="tab-content ">
+        <div class="tab-pane active" id="Home">
+            <header class="d-flex justify-content-between p-1 bg-dark text-white position-sticky">
+                <div>
+                    <span class="fs-1 p-5 fw-bold">FreshCart</span>
+                </div>
+
+                <div class=" p-1">
+                    <nav>
+                        <button data-bs-target="#login" data-bs-toggle="modal"
+                            class="btn btn-primary m-md-1 btn-hover">Login</button>
+                        <button data-bs-target="#register" data-bs-toggle="modal"
+                            class="btn btn-primary m-md-1 btn-hover">Register</button>
+                        <span class="bi bi-heart m-md-1 fs-4 mt-2"></span>
+                        <span class="bi bi-cart3 m-md-1 fs-4">
+                            <sup class="bg-danger text-white fs-6 p-1 rounded-circle">2</sup>
+                        </span>
+                    </nav>
+                </div>
+            </header>
+            <article class="bg-success text-dark fw-bold p-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                                <li class="nav-item"><a href="#Home" data-bs-toggle="tab"
+                                        class="nav-link active text-dark">Home</a></li>
+                                <li class="nav-item"><a href="#category" data-bs-toggle="tab"
+                                        class="nav-link  text-dark">All categories</a></li>
+                                <li class="nav-item"><a href="#deals" data-bs-toggle="tab"
+                                        class="nav-link text-dark">Best Deals <br>Save more</a></li>
+                                <li class="nav-item"><a href="#ratings" data-bs-toggle="tab"
+                                        class="nav-link text-dark">Ratings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <section>
+                <div class="container-fluid">
+                    <div class="carousel slide carousel-dark" id="topBanner" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="public/images/shopping 1 copy.jpg" class="w-100" style="height: 20rem"
+                                    alt="Shopping 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="public/images/shopping 2 copy.jpg" class="w-100" style="height: 20rem"
+                                    alt="Shopping 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="public/images/shopping 3 copy.jpeg" class="w-100" style="height: 20rem"
+                                    alt="Shopping 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev " data-bs-slide="prev" data-bs-target="#topBanner">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#topBanner">
+                            <span class="carousel-control-next-icon "></span>
+                        </button>
+                        <div class="carousel-indicators">
+                            <button class="active" data-bs-slide-to="0" data-bs-target="#topBanner"></button>
+                            <button data-bs-slide-to="1" data-bs-target="#topBanner"></button>
+                            <button data-bs-slide-to="2" data-bs-target="#topBanner"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid mt-5 mb-4">
+                    <h2>Categories</h2>
+                    <div class="scrollable-cards-container">
+                        <div class="d-flex">
+                            <div class="card bg-dark text-white p-2 m-2 h-4"
+                                style="width: 250px; height: 450px">
+                                <img class="card-img-top" height="225" src="public/images/fruits.jpg">
+                                <div class="card-header">
+                                    <h2 class="card-title">Fruits</h2>
+                                    <p class="card-subtitle">
+                                        <span class="bi bi-calendar"></span> Starts 15-Oct-2023
+                                    </p>
+                                </div>
+                                <div class="card-body"></div>
+                                <div class="d-flex">
+                                    <button class="btn btn-success btn-hover m-md-1" data-bs-target="#details"
+                                        data-bs-toggle="modal">Details</button>
+                                    <div class="card-footer">
+                                        <button class="btn btn-light w-100 btn-hover">Buy now</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card bg-success text-white p-2 m-2" style="width: 250px; height: 450px">
+                                <img class="card-img-top" height="225" src="public/images/dry-fruits2.jpg">
+                                <div class="card-header">
+                                    <h2 class="card-title">Dry Fruits</h2>
+                                    <p class="card-subtitle">
+                                        <span class="bi bi-calendar"></span> Starts 15-Oct-2023
+                                    </p>
+                                </div>
+                                <div class="card-body"></div>
+                                <div class="card-footer">
+                                    <button class="btn btn-light w-100 btn-hover">Buy now</button>
+                                </div>
+                            </div>
+
+                            <div class="card bg-danger text-white p-2 m-2" style="width: 250px; height: 450px">
+                                <img class="card-img-top" height="225" src="public/images/bread and baked.jpeg">
+                                <div class="card-header">
+                                    <h2 class="card-title">Bread And <br> Baked</h2>
+                                    <p class="card-subtitle">
+                                        <span class="bi bi-calendar"></span> Starts 15-Oct-2023
+                                    </p>
+                                </div>
+                                <div class="card-body"></div>
+                                <div class="card-footer">
+                                    <button class="btn btn-light w-100 btn-hover">Buy now</button>
+                                </div>
+                            </div>
+
+                            <div class="card bg-success text-white p-2 m-2" style="width: 250px; height: 450px">
+                                <img class="card-img-top" height="225" src="public/images/snacks.jpg">
+                                <div class="card-header">
+                                    <h2 class="card-title">Snacks</h2>
+                                    <p class="card-subtitle">
+                                        <span class="bi bi-calendar"></span> Starts 15-Oct-2023
+                                    </p>
+                                </div>
+                                <div class="card-body"></div>
+                                <div class="card-footer">
+                                    <button class="btn btn-light w-100 btn-hover">Buy now</button>
+                                </div>
+                            </div>
+                            <div class="card bg-danger text-white p-2 m-2" style="width: 250px; height: 450px">
+                                <img class="card-img-top" height="225" src="public/images/oil.jpg">
+                                <div class="card-header">
+                                    <h2 class="card-title">Oils</h2>
+                                    <p class="card-subtitle">
+                                        <span class="bi bi-calendar"></span> Starts 15-Oct-2023
+                                    </p>
+                                </div>
+                                <div class="card-body"></div>
+                                <div class="card-footer">
+                                    <button class="btn btn-light w-100 btn-hover">Buy now</button>
+                                </div>
+                            </div>
+
+                            <div class="card p-2 m-2" style="width: 250px; height: 450px">
+                                <img class="card-img-top" height="225" src="public/images/vegetables.jpg">
+                                <div class="card-header">
+                                    <h2 class="card-title">Vegetables</h2>
+                                    <p class="card-subtitle">
+                                        <span class="bi bi-calendar"></span> Starts 15-Oct-2023
+                                    </p>
+                                </div>
+                                <div class="card-body"></div>
+                                <div class="card-footer">
+                                    <button class="btn btn-primary w-100 btn-hover">Buy now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="modal fade" id="details">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Realme C55</h3>
+                            <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="public/images/kids-wear.jpg" width="200" height="300" alt="Product Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="login">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-dark">
+                            <h3><span class="bi bi-person-fill"></span> User Login</h3>
+                            <button data-bs-dismiss="modal" class="btn btn-close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <dl>
+                                <dt>User Name</dt>
+                                <dd><input type="text" required class="form-control" /></dd>
+                                <dt>Password</dt>
+                                <dd><input type="password" required class="form-control" /></dd>
+                            </dl>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Login</button>
+                            <button data-bs-dismiss="modal" class="btn btn-danger">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="register">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-dark">
+                            <h3><span class="bi bi-person-fill"></span> User Login</h3>
+                            <button data-bs-dismiss="modal" class="btn btn-close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <dl>
+                                <dt>User Name</dt>
+                                <dd><input type="text" class="form-control" minlength="6" required /></dd>
+                                <dt>Mobile number</dt>
+                                <dd><input type="number" class="form-control" required minlength="10" maxlength="10" />
+                                </dd>
+                                <dt>Email</dt>
+                                <dd><input type="email" class="form-control" required /></dd>
+                                <dt>Create password</dt>
+                                <dd><input type="password" class="form-control" required /></dd>
+                                <dt>Confirm Password</dt>
+                                <dd><input type="password" class="form-control" required /></dd>
+                            </dl>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Register</button>
+                            <button data-bs-dismiss="modal" class="btn btn-danger">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="d-flex justify-content-center">
+                    <ul class="pagination pagination-sm">
+                        <li class="page-item active">
+                            <a class="page-link ps-4 pe-4 m-2"><span class="page-text">&laquo;</span></a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link ps-4 pe-4 m-2"><span class="page-text">1</span></a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link ps-4 pe-4 m-2"><span class="page-text">2</span></a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link ps-4 pe-4 m-2"><span class="page-text">3</span></a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link ps-4 pe-4 m-2"><span class="page-text">4</span></a>
+                        </li>
+                        <li class="page-item disabled">
+                            <a class="page-link ps-4 pe-4 m-2"><span class="page-text">5</span></a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link ps-4 pe-4 m-2"><span class="page-text">&raquo;</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container-fluid mt-5">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h3 style="text-align: left">Frequently Asked Questions</h3>
+                        <div class="accordion  mt-3" id="faqs">
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button data-bs-target="#q1" data-bs-toggle="collapse"
+                                        class="btn btn-dark accordion-button w-100" style="text-align: left">
+                                        1. How do I create an account in the grocery store app?
+                                    </button>
+                                </div>
+                                <div class="accordion-collapse collapse" id="q1" data-bs-parent="#faqs">
+                                    <div class="accordion-body bg-dark text-white p-4">
+                                        <p>
+                                            Ans. To create an account, open the app and click on the "Register" button.
+                                            You'll need to provide your name, email address, phone number, and create a
+                                            password. Follow the on-screen instructions to complete the registration
+                                            process.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button data-bs-target="#q2" data-bs-toggle="collapse"
+                                        class="btn btn-dark accordion-button w-100" style="text-align: left">
+                                        2. What payment methods are accepted on the app?
+                                    </button>
+                                </div>
+                                <div class="accordion-collapse collapse" id="q2" data-bs-parent="#faqs">
+                                    <div class="accordion-body bg-dark text-white p-4">
+                                        <p>
+                                            Ans. We accept various payment methods, including credit cards, debit cards,
+                                            digital wallets (e.g., Paytm, Phone Pay, Google Pay), and cash on delivery
+                                            (if available in your area).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <button data-bs-target="#q3" data-bs-toggle="collapse"
+                                        class="btn btn-dark accordion-button w-100" style="text-align: left">
+                                        3. Another FAQ question.
+                                    </button>
+                                </div>
+                                <div class="accordion-collapse collapse" id="q3" data-bs-parent="#faqs">
+                                    <div class="accordion-body bg-dark text-white p-4">
+                                        <p>
+                                            Ans. Answer to the third question goes here.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="container text-bg-dark mt-5 text-white">
+                <div class="row">
+                    <div class="col">
+                        <div class="fs-2 fw-bold p-2">Shopper</div>
+                        <aside>
+                            <span class="bi bi-facebook"></span>
+                            <span class="bi bi-twitter"></span>
+                            <span class="bi bi-instagram"></span>
+                            <span class="bi bi-linkedin"></span>
+                            <span class="bi bi-youtube"></span>
+                        </aside>
+                    </div>
+                    <div class="col">
+                        <div class="fs-6 fw-bold mb-sm-2 pt-4">SUPPORT</div>
+                        <span class="d-block mb-2">Contact Us</span>
+                        <span class="d-block mb-2">FAQs</span>
+                        <span class="d-block mb-2">Size Guide</span>
+                        <span class="d-block mb-2">Shipping & Returns</span>
+                    </div>
+                    <div class="col">
+                        <div class="fs-6 fw-bold mb-sm-2 pt-4">SHOP</div>
+                        <span class="d-block mb-2">Men's Shopping</span>
+                        <span class="d-block mb-2">Women's Shopping</span>
+                        <span class="d-block mb-2">Kids' Shopping</span>
+                        <span class="d-block mb-6">Discounts</span>
+                    </div>
+                    <div class="col">
+                        <div class="fs-6 fw-bold mb-sm-2 pt-4">COMPANY</div>
+                        <span class="d-block mb-2">Our Story</span>
+                        <span class="d-block mb-2">Careers</span>
+                        <span class="d-block mb-2">Terms & Conditions</span>
+                        <span class="d-block mb-2">Privacy & Cookie policy</span>
+                    </div>
+                    <div class="col">
+                        <div class="fs-6 fw-bold mb-sm-2 pt-4">CONTACT</div>
+                        <span class="d-block mb-2">1-202-555-0105</span>
+                        <span class="d-block mb-2">1-202-555-0106</span>
+                        <span class="d-block mb-2 pb-5">help@shopper.com</span>
+                    </div>
+                </div>
+            </footer>
+</body>
+</html>
